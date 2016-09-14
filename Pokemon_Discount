@@ -2,14 +2,14 @@
 Number of Different Pokemon
 Purchased
 Quantity 	Discount
-1 			0%
-2 			10%
-3 			20%
+1 			0
+2 			0.1
+3 			0.2
 *//
 
 Create table pokemon_discount 
 (Quantity Number(3),
-Discount	Number(3));
+Discount	Number(3,2));
 
 Insert into pokemon_discount values('1','0');
 Insert into pokemon_discount values('2','10');
@@ -19,9 +19,9 @@ Insert into pokemon_discount values('3','20');
 Table- pokemon_sales_price
 Pokemon for Sale Price
 Name		Price
-Pikachu 	$6
-Squirtle 	$5
-Charmander 	$5
+Pikachu 	 6
+Squirtle 	 5
+Charmander       5
 *//
 
 Create table pokemon_sales_price 
@@ -64,8 +64,8 @@ DECLARE
   q2                  number(3);              /* Quantity Calculation 2                           */
   q3                  number(3);             /* Quantity Calculation 3                           */
   t1                  number(3);            /* Part Calculation 1                               */
-  p1                  number(3,1) :=0.2;   /* Percentage for the purchase of 3 distinct Items  */  
-  p2                  number(3,1) := 0.1; /* Percentage for the purchase of 2 distinct Items  */
+  p1                  number(3,1)          /* Percentage for the purchase of 3 distinct Items  */  
+  p2                  number(3,1)         /* Percentage for the purchase of 2 distinct Items  */
   
 BEGIN
   
@@ -75,7 +75,9 @@ BEGIN
   select sum(Quantity) into Pikachu_quantity   from Pokemon_sales where name = 'Pikachu' and order_id = :order_id;     /* :order_id is a Host Variable*/
   select sum(Quantity) into Squirtle_quantity from pokemon_sales where name ='Squirtle' and order_id = :order_id;     /* :order_id is a Host Variable*/
   select sum(quantity) into Charmander_quantity from pokemon_sales where name ='Charmander' and order_id =:order_id; /* :order_id is a Host Variable*/
- 
+  select discount  into p1 from pokemon_discount where quantity = 3; 
+  select discount  into p2 from pokemon_discount where quantity = 2; 
+  
 //* Logic for the Purchase of 3 Items *//
 
   if Pikachu_quantity == Squirtle_quantity and Squirtle_quantity == Charmander_quantity then 
