@@ -64,8 +64,8 @@ DECLARE
   q2                  number(3);              /* Quantity Calculation 2                           */
   q3                  number(3);             /* Quantity Calculation 3                           */
   t1                  number(3);            /* Part Calculation 1                               */
-  p1                  number(3,1) :=0.3;   /* Percentage for the purchase of 3 distinct Items  */  
-  p2                  number(3,1) := 0.2; /* Percentage for the purchase of 2 distinct Items  */
+  p1                  number(3,1) :=0.2;   /* Percentage for the purchase of 3 distinct Items  */  
+  p2                  number(3,1) := 0.1; /* Percentage for the purchase of 2 distinct Items  */
   
 BEGIN
   
