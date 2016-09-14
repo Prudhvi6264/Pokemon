@@ -82,7 +82,7 @@ BEGIN
 
   if Pikachu_quantity == Squirtle_quantity and Squirtle_quantity == Charmander_quantity then 
          
-		 total :=  (Pikachu_quantity * Pikachu_price + Squirtle_quantity * Squirtle_price + Charmander_quantity * Charmander_price) * p1;
+		 total :=  ((Pikachu_quantity * Pikachu_price) + (Squirtle_quantity * Squirtle_price) + (Charmander_quantity * Charmander_price)) * p1;
          dbms_output.put_line('Total: ' || total);
    
    elsif Pikachu_quantity > 1 and Pikachu_quantity > Squirtle_quantity and Pikachu_quantity > Charmander_quantity and Squirtle_quantity > Charmander_quantity  and Squirtle_quantity <> 0 and Charmander_quantity <>0 then
