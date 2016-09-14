@@ -88,76 +88,76 @@ BEGIN
    elsif Pikachu_quantity > 1 and Pikachu_quantity > Squirtle_quantity and Pikachu_quantity > Charmander_quantity and Squirtle_quantity > Charmander_quantity  and Squirtle_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Charmander_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_pric)e + (q1 * Squirtle_price) + (q1 * Charmander_price)) * p1;
 		  
 		  q2 := Squirtle_quantity - Charmander_quantity;
 		  q3 :=  Pikachu_quantity - Charmander_quantity;
 		  
-		  total := t1 + q2 * Squirtle_price + q3 * Pikachu_price;
+		  total := t1 + (q2 * Squirtle_price) + (q3 * Pikachu_price);
 		  dbms_output.put_line('Total: ' || total);
    
    elsif Pikachu_quantity > 1 and Pikachu_quantity > Squirtle_quantity and Pikachu_quantity > Charmander_quantity and Charmander_quantity > Squirtle_quantity   and Squirtle_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Squirtle_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_pric)e + (q1 * Squirtle_price) + (q1 * Charmander_price)) * p1;
 		  
 		  q2 := Charmander_quantity - Squirtle_quantity ;
 		  q3 :=  Pikachu_quantity - Squirtle_quantity ;
 		  
-		  total := t1 + q2 * Charmander_price + q3 * Pikachu_price;
+		  total := t1 + (q2 * Charmander_price) + (q3 * Pikachu_price);
 	      dbms_output.put_line('Total: ' || total);
   
    
    elsif Squirtle_quantity > 1 and Squirtle_quantity > Pikachu_quantity and Squirtle_quantity > Charmander_quantity and Pikachu_quantity > Charmander_quantity  and Pikachu_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Charmander_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_price) + q1 * (Squirtle_price + q1) *( Charmander_price * p1));
 		  
 		  q2 := Squirtle_quantity - Charmander_quantity;
 		  q3 :=  Pikachu_quantity - Charmander_quantity;
 		  
-		  total := t1 + q2 * Squirtle_price + q3 * Pikachu_price;
+		  total := t1 + (q2 * Squirtle_price) + (q3 * Pikachu_price);
 	      dbms_output.put_line('Total: ' || total);
   
    elsif Squirtle_quantity > 1 and Squirtle_quantity > Pikachu_quantity and Squirtle_quantity > Charmander_quantity and Charmander_quantity > Pikachu_quantity    and Pikachu_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Pikachu_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_price) + (q1 * Squirtle_price) + (q1 * Charmander_price)) * p1;
 		  
 		  q2 := Squirtle_quantity - Pikachu_quantity;
 		  q3 :=  Charmander_quantity - Pikachu_quantity;
 		  
-		  total := t1 + q2 * Squirtle_price + q3 * Charmander_price;
+		  total := t1 + (q2 * Squirtle_price) + (q3 * Charmander_price);
 	      dbms_output.put_line('Total: ' || total);
   
    elsif Charmander_quantity > 1 and Charmander_quantity > Pikachu_quantity and Charmander_quantity > Squirtle_quantity and Pikachu_quantity > Squirtle_quantity   and Pikachu_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Squirtle_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_price) +( q1 * Squirtle_price) +( q1 * Charmander_price)) * p1;
 		  
 		  q2 := Charmander_quantity - Squirtle_quantity;
 		  q3 :=  Pikachu_quantity - Squirtle_quantity;
 		  
-		  total := t1 + q2 * Charmander_price + q3 * Pikachu_price;
+		  total := t1 + (q2 * Charmander_price) + (q3 * Pikachu_price);
           dbms_output.put_line('Total: ' || total);
   
     
    elsif Charmander_quantity > 1 and Charmander_quantity > Pikachu_quantity and Charmander_quantity > Squirtle_quantity and Squirtle_quantity > Pikachu_quantity   and Pikachu_quantity <> 0 and Charmander_quantity <>0 then
        
           q1 := Pikachu_quantity;
-		  t1 := (q1 * Pikachu_price + q1 * Squirtle_price + q1 * Charmander_price) * p1;
+		  t1 := ((q1 * Pikachu_price) + (q1 * Squirtle_price) + (q1 * Charmander_price)) * p1;
 		  
 		  q2 := Charmander_quantity - Pikachu_quantity;
 		  q3 :=  Squirtle_quantity - Pikachu_quantity;
 		  
-		  total := t1 + q2 * Charmander_price + q3 * Squirtle_price;
+		  total := t1 + (q2 * Charmander_price) + (q3 * Squirtle_price);
 	      dbms_output.put_line('Total: ' || total);
    
 //* Logic for the Purchase of 2 Items *//
    
     elsif Pikachu_quantity == Squirtle_quantity  or Charmander_quantity == Squirtle_quantity or  Charmander_quantity = Pikachu_quantity then
     
-		   total :=   (Pikachu_quantity * Pikachu_price + Squirtle_quantity * Squirtle_price + Charmander_quantity * Charmander_price) * p2;
+		   total :=   ((Pikachu_quantity * Pikachu_price) + (Squirtle_quantity * Squirtle_price) + (Charmander_quantity * Charmander_price)) * p2;
 	       dbms_output.put_line('Total: ' || total);
 	
     elsif Pikachu quantity > 1 and Pikachu quantity > Squirtle_quantity and Squirtle_quantity <> 0 and Charmander_quantity ==0  then
@@ -165,7 +165,7 @@ BEGIN
 			q1 := Pikachu_quantity - Squirtle_quantity;
 			w1 := Pikachu_quantity - q1; 
       	    
-			t1 := (w1 * Pikachu_price + w1 * Squirtle_price) * p2;
+			t1 := ((w1 * Pikachu_price) +( w1 * Squirtle_price)) * p2;
 			total := t1 + (q1 * Pikachu_price );
     
 			dbms_output.put_line('Total: ' || total);
@@ -175,7 +175,7 @@ BEGIN
 			q1 := Pikachu_quantity - Charmander_quantity;
 			w1 := Pikachu_quantity - q1;
 	  
-			t1 := (w1 * Pikachu_price + w1 * Charmander_price) * p2;
+			t1 := ((w1 * Pikachu_price) + (w1 * Charmander_price)) * p2;
 			total := t1 + (q1 * Pikachu_price );
 	
 			dbms_output.put_line('Total: ' || total);
@@ -185,8 +185,8 @@ BEGIN
 			q1 := Squirtle_quantity - Pikachu_quantity;
 			w1 := Squirtle_quantity - q1; 
       	    
-			t1 := (w1 * Squirtle_price + w1 * Pikachu_price) * p2;
-			total := t1 + (q1 * Squirtle_price  );
+			t1 := ((w1 * Squirtle_price) + (w1 * Pikachu_price)) * p2;
+			total := t1 + (q1 * Squirtle_price);
     
 			dbms_output.put_line('Total: ' || total);
 		
@@ -195,7 +195,7 @@ BEGIN
 			q1 := Squirtle_quantity - Charmander_quantity;
 			w1 := Squirtle_quantity - q1;
 	  
-			t1 := (w1 * Squirtle_price + w1 * Charmander_price) * p2;
+			t1 := ((w1 * Squirtle_price) + (w1 * Charmander_price)) * p2;
 			total := t1 + (q1 * Squirtle_price );
 	
 			dbms_output.put_line('Total: ' || total);
@@ -205,7 +205,7 @@ BEGIN
 			q1 := Charmander_quantity - Pikachu_quantity;
 			w1 := Charmander_quantity - q1; 
       	    
-			t1 := (w1 * Charmander_price + w1 * Pikachu_price) * p2;
+			t1 := ((w1 * Charmander_price) + (w1 * Pikachu_price)) * p2;
 			total := t1 + (q1 * Charmander_price  );
     
 			dbms_output.put_line('Total: ' || total);
@@ -215,7 +215,7 @@ BEGIN
 			q1 := Charmander_quantity - Squirtle_quantity;
 			w1 := Charmander_quantity - q1;
 	  
-			t1 := (w1 * Charmander_price + w1 * Squirtle_price) * p2;
+			t1 := ((w1 * Charmander_price) + (w1 * Squirtle_price)) * p2;
 			total := t1 + (q1 * Charmander_price );
 	
 			dbms_output.put_line('Total: ' || total);
